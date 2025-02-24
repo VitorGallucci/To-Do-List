@@ -1,4 +1,5 @@
 import GerarDiaDaSemana from './GerarDiaDaSemana.js';
+import verificarListaVazia from './VerificarListaVazia.js';
 
 const inputItem = document.getElementById('input-item');
 let contador = 0;
@@ -27,10 +28,19 @@ export function CriarItemDaLista () {
             nomeItem.style.textDecoration = 'none';
             nomeItem.style.color = 'var(--cor-preta)';
         }
-    })
+    });
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.className = 'delete-button';
+    deleteButton.addEventListener('click', function() {
+        itemLista.remove();
+        verificarListaVazia(document.getElementById('lista-de-compras'));
+    });
 
     containerItemLista.appendChild(inputCheckbox);
     containerItemLista.appendChild(nomeItem);
+    containerItemLista.appendChild(deleteButton);
 
     itemLista.appendChild(containerItemLista);
 
@@ -40,8 +50,7 @@ export function CriarItemDaLista () {
     itemData.innerText = dataCompleta;
     itemData.classList.add('texto-data');
 
-    itemLista.appendChild(itemData)
+    itemLista.appendChild(itemData);
 
     return itemLista;
-
 }
