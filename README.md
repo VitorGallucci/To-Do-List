@@ -1,9 +1,9 @@
 
 ![Descricao da sua imagem](https://imgur.com/C8TfWXc.png)
 
-# Titulo do projeto
+# To Do Interactive List
 
-Aplicação web de lista de compras para o curso de construção de páginas dinâmicas com JavaScript.
+Aplicação web de lista para o curso de construção de páginas dinâmicas com JavaScript.
 
 ## 🔨 Funcionalidades do projeto
 
